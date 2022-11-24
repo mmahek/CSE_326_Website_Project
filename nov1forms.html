@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+      *{text-align: center;
+      font-size: 30px;}
+   </style>
+
+<title>Document</title>
+
+</head>
+<body>
+   <h1>This is a form.</h1>
+
+<form action="backend.php" method="get"><!-- another value for method attribute that is "post" which is more safe-->
+ <!--method attribute, provides the communication between backend.php fle and this form-->
+<label for="nameid">Name</label>
+<!-- label allows us to go for writing directly and jumps to the box directly -->
+<!--(for="name")==(id="nameid"). this is necessary for doing the upper thing-->
+<div>
+<input type="text" name="Myname" id="nameid" autocomplete="on"></div>
+<!--name attribute gives the identity to the name that we are providing-->
+<br>
+<div>Roll No: <input type="number" name="Myrollno"></div>
+<br>
+<div>Email Id: <input type="email" name="Myemail" autocomplete="off"></div>
+<br>
+<div>Date: <input type="" name="mydate" min="2022-10-11"></div>
+<br>
+<label for="eligibleid">Are you eligible: </label>
+<div><input type="checkbox" name="myeligibility" id="eligibleid" checked></div>
+<!--this checked keyword will make the entry all ready checked-->
+<br><!--these breakes ar used to go to the next line or start from new line-->
+<div>Gender: Male <input type="radio" name="mygender"> Female <input type="radio" name="mygender"></div>
+<!--if want to retrict the no. of values picked then use the same name in every option available-->
+<!--radio unables the rounded boxes and select either-->
+<br>
+<div>
+<label for="birthdaytime">Birthday (date and time):</label>
+<input type="datetime-local" id="birthdaytime" name="birthdaytime">
+
+</div>
+<br>
+<div>
+<label for="hobbiesid">Select your option</label>
+<select name="Myhobbies" id="hobbiesid">
+   <!-- it creats options for selection and for drop down option is to be used-->
+<option value="1">Reading</option>
+<option value="2">Writing</option>
+<option value="3" selected>Coding</option>
+<option value="4">Sleeping</option>
+</select>
+</div>
+<br>
+<div>
+<input type="button" onclick="alert('this is cool')" 
+value="click me!!!">
+<!--this alerts us or shows the message -->
+</div>
+<br>
+<div>
+<label for="favcolor">Select your favorite color:</label>
+<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+</div>
+<br>
+<div><input type="submit" value="submit now">
+<input type="reset" value="Reset now"></div>
+<br>
+
+<div>Write about yourself: <br><textarea name="mytext" cols="30" rows="20"></textarea></div>
+<br>
+</form>
+
+</body>
+</html>
